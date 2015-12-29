@@ -18,8 +18,11 @@ var router = express.Router();
 router.route("/Books")
     .post(function (req, res) {
         var book = new Book(req.body);
-        console.log(book);
-        res.send(book);
+        //  console.log(book);
+
+        // save the book in mongodb
+        book.save();
+        res.status(201).send(book);
     })
     .get(function (req, res) {
     //var responseJson = {

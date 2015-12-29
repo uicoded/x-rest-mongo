@@ -18,7 +18,7 @@ var routes = function resource (Book) {
 
     // Plural "Books" seem to be more common naming
     // TODO: find out if it is instance or can be extended (getting singleton)
-    router.route("/Books")
+    router.route("/")
         .post(function (req, res) {
             var book = new Book(req.body);
             // console.log(book);
@@ -46,7 +46,7 @@ var routes = function resource (Book) {
             });
         });
 
-    router.route("/Books/:bookId").get(function (req, res) {
+    router.route("/:bookId").get(function (req, res) {
         Book.findById(req.params.bookId, function (err, book) {
             if (err) {
                 res.status(500).send(err);

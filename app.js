@@ -11,10 +11,10 @@ app.use(bodyParser.json());
 
 // Book model
 var Book = require("./models/bookModel");
-var router = require("./routes/book.routes.js")(Book);
+var bookRouter = require("./routes/book.routes.js")(Book);
 
 
-app.use("/api", router);
+app.use("/api/books", bookRouter);
 
 
 app.get("/", function (req, res) {

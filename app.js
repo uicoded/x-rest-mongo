@@ -1,17 +1,27 @@
 var express = require("express");
 var mongoose = require("mongoose");
+var bodyParser = require("body-parser");
 
 var db = mongoose.connect("mongodb://localhost/bookAPI");
 var app = express();
 var port = process.env.PORT || 3000;
+
+//app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 /* Models */
 var Book = require("./models/bookModel");
 
 var router = express.Router();
 
-// Plural seem to be more common
-router.route("/Books").get(function (req, res) {
+// Plural "Books" seem to be more common naming
+router.route("/Books")
+    .post(function (req, res) {
+        var book = new Book(req.body);
+        console.log(book);
+        res.send(book);
+    })
+    .get(function (req, res) {
     //var responseJson = {
     //    hello: "Book A"
     //};

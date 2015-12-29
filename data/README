@@ -1,0 +1,4 @@
+To import Book data:
+
+1. Start MongoDB
+2. run `mongo bookAPI < mongo-books.js`

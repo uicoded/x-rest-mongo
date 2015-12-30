@@ -73,8 +73,13 @@ var routes = function resource (Book) {
             req.book.author = req.body.author;
             req.book.genre = req.body.genre;
             req.book.read = req.body.read;
-            req.book.save();
-            res.json(req.book);
+            req.book.save(function (err) {
+                if (err) {
+                    res.status(500).send(err);
+                } else {
+                    res.json(req.book);
+                }
+            });
         })
         .patch(function (req, res) {
             // update req.book with only req.body.attrx where attrx exists
@@ -88,8 +93,13 @@ var routes = function resource (Book) {
                         req.book[prop] = req.body[prop];
                     //}
                 }
-                req.book.save();
-                res.json(req.book);
+                req.book.save(function (err) {
+                    if (err) {
+                        res.status(500).send(err);
+                    } else {
+                        res.json(req.book);
+                    }
+                });
             }
         });
 

@@ -75,6 +75,22 @@ var routes = function resource (Book) {
             req.book.read = req.body.read;
             req.book.save();
             res.json(req.book);
+        })
+        .patch(function (req, res) {
+            // update req.book with only req.body.attrx where attrx exists
+            // except of _id
+            if (req.body._id) {
+                delete req.body._id;
+            } else {
+                for (prop in req.body) {
+                    // it inherits so hasOwnProperty does not make sense
+                    //if (req.book.hasOwnProperty(prop)) {
+                        req.book[prop] = req.body[prop];
+                    //}
+                }
+                req.book.save();
+                res.json(req.book);
+            }
         });
 
     return router;

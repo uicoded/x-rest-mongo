@@ -9,13 +9,13 @@ var port = process.env.PORT || 8000;
 //app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-// Author model
-var Author = require("./models/author.model");
-var authorRouter = require("./routes/author.routes.js")(Author);
-
 // Book model
-var Book = require("./models/book.model");
+var Book = require("./models/book.model.js");
 var bookRouter = require("./routes/book.routes.js")(Book);
+
+// Author model
+var Author = require("./models/author.model.js");
+var authorRouter = require("./routes/author.routes.js")(Author);
 
 app.use("/api/books", bookRouter);
 app.use("/api/authors", authorRouter);

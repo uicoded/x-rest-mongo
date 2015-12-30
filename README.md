@@ -10,7 +10,6 @@ Enhanced with:
     - running [nodemon](http://nodemon.io/) for automatic restart
 
 
-
 ## Setup
 
 1. run `npm install`
@@ -22,6 +21,11 @@ Enhanced with:
 
 
 ## Example Detail
+
+Get [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) app for comfortable API
+handling. Optionally import the `data/BOOK_API.json/postman_collection` the existing collection.
+
+Try all supported verbs: GET, POST, PUT, PATCH, DELETE
 
 
 ### Book Resource

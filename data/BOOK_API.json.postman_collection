@@ -10,7 +10,8 @@
 		"6fdaf0ea-9f51-dd15-e8da-e67ebe33eb53",
 		"2758f84d-c9e8-75ff-a51e-475a7219f05f",
 		"305c2019-ae0c-19fc-422a-f13261af158d",
-		"b0f24d75-76f4-ea27-677b-5945561e4d73"
+		"b0f24d75-76f4-ea27-677b-5945561e4d73",
+		"c60ae100-e47b-0cc0-395c-d10a9e1357ac"
 	],
 	"folders": [],
 	"timestamp": 1451404126812,
@@ -89,12 +90,12 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1451429142672,
+			"time": 1451451409881,
 			"name": "http://localhost:8000/api/Books/",
 			"description": "Saving new book. Using body-parser",
 			"collectionId": "19fbd561-3cd3-0f5e-5f20-a3faeb97b1fe",
 			"responses": [],
-			"rawModeData": "{\n    \"title\": \"My New Book The Sequel\",\n    \"genre\": \"Comedy\",\n    \"author\": \"uicoded\"\n}"
+			"rawModeData": "{\n    \"title\": \"My Eight Book\",\n    \"genre\": \"Drama\",\n    \"author\": \"uicoded\"\n}"
 		},
 		{
 			"id": "6fdaf0ea-9f51-dd15-e8da-e67ebe33eb53",
@@ -135,6 +136,26 @@
 			"collectionId": "19fbd561-3cd3-0f5e-5f20-a3faeb97b1fe",
 			"responses": [],
 			"rawModeData": "{\n    \"title\": \"My Fifth Book\",\n    \"genre\": \"Drama\"\n}"
+		},
+		{
+			"id": "c60ae100-e47b-0cc0-395c-d10a9e1357ac",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://localhost:8000/api/Books/568363eeea43439f1f4cd9f6",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1451451383867,
+			"name": "http://localhost:8000/api/Books/5682b418bba6985e1702b56a",
+			"description": "",
+			"collectionId": "19fbd561-3cd3-0f5e-5f20-a3faeb97b1fe",
+			"responses": [],
+			"rawModeData": ""
 		},
 		{
 			"id": "cd389a4e-d9f9-e971-7085-f75f63c64722",

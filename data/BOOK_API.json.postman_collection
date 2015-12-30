@@ -8,7 +8,9 @@
 		"2ff483d0-9091-e891-bc13-4225bda466aa",
 		"3234d88c-61f7-ddb5-dcb9-aa7c66014955",
 		"6fdaf0ea-9f51-dd15-e8da-e67ebe33eb53",
-		"2758f84d-c9e8-75ff-a51e-475a7219f05f"
+		"2758f84d-c9e8-75ff-a51e-475a7219f05f",
+		"305c2019-ae0c-19fc-422a-f13261af158d",
+		"b0f24d75-76f4-ea27-677b-5945561e4d73"
 	],
 	"folders": [],
 	"timestamp": 1451404126812,
@@ -55,6 +57,26 @@
 			"responses": []
 		},
 		{
+			"id": "305c2019-ae0c-19fc-422a-f13261af158d",
+			"headers": "Content-Type: application/javascript\n",
+			"url": "http://localhost:8000/api/Books/5682b418bba6985e1702b56a",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1451435250261,
+			"name": "http://localhost:8000/api/Books/568302b792a9af5b1aa5e96f",
+			"description": "",
+			"collectionId": "19fbd561-3cd3-0f5e-5f20-a3faeb97b1fe",
+			"responses": [],
+			"rawModeData": "{\n    \"title\": \"My Third Book\",\n    \"genre\": \"Comedy\",\n    \"author\": \"uicoded\"\n}"
+		},
+		{
 			"id": "3234d88c-61f7-ddb5-dcb9-aa7c66014955",
 			"headers": "Content-Type: application/json\n",
 			"url": "http://localhost:8000/api/Books/",
@@ -93,6 +115,26 @@
 			"collectionId": "19fbd561-3cd3-0f5e-5f20-a3faeb97b1fe",
 			"responses": [],
 			"rawModeData": "{\n    \"name\": \"Franz Kafka\",\n    \"gender\": \"M\",\n    \"born\": \"July 3, 1883\",\n    \"died\": \"June 3, 1924\",\n    \"bio\": \"Kafka was born into a middle-class, German-speaking Jewish family in Prague, the capital of the Kingdom of Bohemia, then part of the Austro-Hungarian Empire. He trained as a lawyer, and after completing his legal education he obtained employment with an insurance company while writing in his spare time; for the rest of his life was to complain about how little time he had to devote to his passion due to the demands of his Brotberuf (\\\"day job\\\", literally \\\"bread job\\\"). Kafka has been interpreted as an author exploring themes of alienation, existential anxiety, guilt, and absurdity and one of the major figures of the 20th century literature.\"\n}"
+		},
+		{
+			"id": "b0f24d75-76f4-ea27-677b-5945561e4d73",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://localhost:8000/api/Books/5682b418bba6985e1702b56a",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PATCH",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1451448229107,
+			"name": "http://localhost:8000/api/Books/5682b418bba6985e1702b56a",
+			"description": "",
+			"collectionId": "19fbd561-3cd3-0f5e-5f20-a3faeb97b1fe",
+			"responses": [],
+			"rawModeData": "{\n    \"title\": \"My Fifth Book\",\n    \"genre\": \"Drama\"\n}"
 		},
 		{
 			"id": "cd389a4e-d9f9-e971-7085-f75f63c64722",

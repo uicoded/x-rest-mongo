@@ -46,15 +46,32 @@ var routes = function resource (Book) {
             });
         });
 
-    router.route("/:bookId").get(function (req, res) {
-        Book.findById(req.params.bookId, function (err, book) {
-            if (err) {
-                res.status(500).send(err);
-            } else {
-                res.json(book);
-            }
+    router.route("/:bookId")
+        .get(function (req, res) {
+            Book.findById(req.params.bookId, function (err, book) {
+                if (err) {
+                    res.status(500).send(err);
+                } else {
+                    res.json(book);
+                }
+            })
         })
-    });
+        .put(function (req, res) {
+            Book.findById(req.params.bookId, function (err, book) {
+                if (err) {
+                    res.status(500).send(err);
+                } else {
+                    // seems fragile
+                    // if req.body.x was not sent it is undefined
+                    book.title = req.body.title;
+                    book.author = req.body.author;
+                    book.genre = req.body.genre;
+                    book.read = req.body.read;
+                    book.save();
+                    res.status(201).json(book);
+                }
+            });
+        });
 
     return router;
 };
